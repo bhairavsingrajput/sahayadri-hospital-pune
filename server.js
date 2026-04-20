@@ -9,6 +9,7 @@ dotenv.config();
 const app = express();
 const PORT = Number(process.env.PORT || 3000);
 const DB_NAME = process.env.MONGODB_DB || 'hospital_portal';
+const API_PREFIX = process.env.VERCEL ? '' : '/api';
 
 app.use(express.json({ limit: '1mb' }));
 app.use(express.urlencoded({ extended: false }));
@@ -68,7 +69,7 @@ function safeText(value) {
     return String(value || '').trim();
 }
 
-app.get('/api/health', async (req, res) => {
+app.get(`${API_PREFIX}/health`, async (req, res) => {
     try {
         const db = await getDb();
         await db.command({ ping: 1 });
@@ -78,7 +79,7 @@ app.get('/api/health', async (req, res) => {
     }
 });
 
-app.post('/api/contact', async (req, res) => {
+app.post(`${API_PREFIX}/contact`, async (req, res) => {
     try {
         const missing = requireFields(req.body, ['name', 'email', 'message']);
         if (missing) {
@@ -101,7 +102,7 @@ app.post('/api/contact', async (req, res) => {
     }
 });
 
-app.post('/api/newsletter', async (req, res) => {
+app.post(`${API_PREFIX}/newsletter`, async (req, res) => {
     try {
         const missing = requireFields(req.body, ['email']);
         if (missing) {
@@ -127,7 +128,7 @@ app.post('/api/newsletter', async (req, res) => {
     }
 });
 
-app.post('/api/messages', async (req, res) => {
+app.post(`${API_PREFIX}/messages`, async (req, res) => {
     try {
         const missing = requireFields(req.body, ['name', 'phone', 'message']);
         if (missing) {
@@ -150,7 +151,7 @@ app.post('/api/messages', async (req, res) => {
     }
 });
 
-app.post('/api/appointments', async (req, res) => {
+app.post(`${API_PREFIX}/appointments`, async (req, res) => {
     try {
         const missing = requireFields(req.body, ['name', 'phone', 'doctor', 'date', 'time', 'mode']);
         if (missing) {
@@ -180,7 +181,7 @@ app.post('/api/appointments', async (req, res) => {
     }
 });
 
-app.post('/api/auth/signup', async (req, res) => {
+app.post(`${API_PREFIX}/auth/signup`, async (req, res) => {
     try {
         const missing = requireFields(req.body, ['name', 'email', 'phone', 'password']);
         if (missing) {
@@ -211,7 +212,7 @@ app.post('/api/auth/signup', async (req, res) => {
     }
 });
 
-app.post('/api/auth/login', async (req, res) => {
+app.post(`${API_PREFIX}/auth/login`, async (req, res) => {
     try {
         const missing = requireFields(req.body, ['email', 'password']);
         if (missing) {
