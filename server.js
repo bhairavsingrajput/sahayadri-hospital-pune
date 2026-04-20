@@ -247,13 +247,19 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-});
+// For Vercel serverless deployment
+module.exports = app;
 
-process.on('SIGINT', async () => {
-    if (cachedClient) {
-        await cachedClient.close();
-    }
-    process.exit(0);
-});
+// For local development
+if (require.main === module) {
+    app.listen(PORT, () => {
+        console.log(`Server running on http://localhost:${PORT}`);
+    });
+
+    process.on('SIGINT', async () => {
+        if (cachedClient) {
+            await cachedClient.close();
+        }
+        process.exit(0);
+    });
+}
