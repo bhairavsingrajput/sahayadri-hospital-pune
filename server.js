@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 const PORT = Number(process.env.PORT || 3000);
 const DB_NAME = process.env.MONGODB_DB || 'hospital_portal';
-const API_PREFIX = process.env.VERCEL ? '' : '/api';
+const API_PREFIX = '/api';
 
 app.use(express.json({ limit: '1mb' }));
 app.use(express.urlencoded({ extended: false }));
