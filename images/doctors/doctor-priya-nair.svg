@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title desc">
+  <title id="title">Dr Priya Nair</title>
+  <desc id="desc">Illustrated portrait placeholder for Dr Priya Nair</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg)"/>
+  <circle cx="300" cy="236" r="112" fill="#fde68a"/>
+  <rect x="165" y="350" width="270" height="180" rx="72" fill="#ffffff" opacity="0.95"/>
+  <path d="M170 225c20-95 240-95 260 0-24-18-66-42-130-42s-106 24-130 42z" fill="#1f2937"/>
+  <circle cx="258" cy="236" r="10" fill="#1f2937"/>
+  <circle cx="342" cy="236" r="10" fill="#1f2937"/>
+  <path d="M255 286c18 19 72 19 90 0" stroke="#1f2937" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <text x="300" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#ffffff">DR PRIYA NAIR</text>
+</svg>

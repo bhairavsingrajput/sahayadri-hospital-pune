@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahayadri Hospital Pune - Modern Healthcare Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+    <div class="top-alert">
+        <div class="container top-alert-content">
+            <p><i class="fas fa-phone-volume"></i> Emergency: +91 8767131112</p>
+            <p><i class="fas fa-hospital"></i> NABH Aligned Protocols | 24x7 Trauma Care</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>Sahayadri</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#doctors" class="nav-link">Doctors</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#appointment" class="nav-link">Appointment</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn btn-outline" onclick="showLoginModal()">Login</button>
+                <button class="btn btn-primary" onclick="showSignupModal()">Sign Up</button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Your Health, <span class="gradient-text">Our Priority</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Advanced diagnostics, experienced specialists, and compassionate nursing care under one roof in Pune.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-large">
+                        <i class="fas fa-comment-medical"></i>
+                        Send Message
+                    </button>
+                    <button class="btn btn-secondary btn-large">
+                        <i class="fas fa-calendar-check"></i>
+                        Book Appointment
+                    </button>
+                </div>
+                <div class="trust-row">
+                    <div class="trust-chip"><i class="fas fa-certificate"></i> 18+ Years Clinical Legacy</div>
+                    <div class="trust-chip"><i class="fas fa-stethoscope"></i> 52 Specialties</div>
+                    <div class="trust-chip"><i class="fas fa-clock"></i> OPD Open 7 Days</div>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>10K+</h3>
+                        <p>Happy Patients</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>500+</h3>
+                        <p>Expert Doctors</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>24/7</h3>
+                        <p>Available Support</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-card">
+                    <div class="card-header">
+                        <div class="doctor-avatar">
+                            <img src="images/doctors/doctor-rajesh-sharma.svg" alt="Dr. Rajesh Sharma">
+                        </div>
+                        <div class="doctor-info">
+                            <h4>Dr. Rajesh Sharma</h4>
+                            <p>Cardiologist</p>
+                        </div>
+                        <div class="status-indicator online"></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="consultation-type">
+                            <i class="fas fa-video"></i>
+                            <span>Video Consultation</span>
+                        </div>
+                        <div class="consultation-time">
+                            <i class="fas fa-clock"></i>
+                            <span>Available in 5 mins</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Comprehensive healthcare solutions at your fingertips</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Consultation</h3>
+                    <p>Connect with doctors face-to-face from the comfort of your home.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h3>E-Prescription</h3>
+                    <p>Get digital prescriptions instantly after your consultation.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Lab Tests</h3>
+                    <p>Book lab tests and get reports delivered online.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Health Monitoring</h3>
+                    <p>Track your health metrics and get personalized insights.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h3>Emergency Care</h3>
+                    <p>24/7 emergency support and ambulance services.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Health Chat</h3>
+                    <p>Chat with healthcare professionals anytime.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="doctors">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Expert Doctors</h2>
+                <p class="section-subtitle">Meet our team of experienced healthcare professionals</p>
+            </div>
+            <div class="doctors-grid">
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="images/doctors/doctor-amit-patel.svg" alt="Dr. Amit Patel">
+                        <div class="doctor-overlay">
+                            <button class="btn btn-small appointment-trigger" data-doctor="Dr. Amit Patel">Book Appointment</button>
+                        </div>
+                    </div>
+                    <div class="doctor-details">
+                        <h3>Dr. Amit Patel</h3>
+                        <p class="specialty">Neurologist</p>
+                        <div class="doctor-stats">
+                            <span><i class="fas fa-star"></i> 4.9</span>
+                            <span><i class="fas fa-user-md"></i> 15+ years</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="images/doctors/doctor-priya-nair.svg" alt="Dr. Priya Nair">
+                        <div class="doctor-overlay">
+                            <button class="btn btn-small appointment-trigger" data-doctor="Dr. Priya Nair">Book Appointment</button>
+                        </div>
+                    </div>
+                    <div class="doctor-details">
+                        <h3>Dr. Priya Nair</h3>
+                        <p class="specialty">Pediatrician</p>
+                        <div class="doctor-stats">
+                            <span><i class="fas fa-star"></i> 4.8</span>
+                            <span><i class="fas fa-user-md"></i> 12+ years</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="images/doctors/doctor-vikram-singh.svg" alt="Dr. Vikram Singh">
+                        <div class="doctor-overlay">
+                            <button class="btn btn-small appointment-trigger" data-doctor="Dr. Vikram Singh">Book Appointment</button>
+                        </div>
+                    </div>
+                    <div class="doctor-details">
+                        <h3>Dr. Vikram Singh</h3>
+                        <p class="specialty">Orthopedic Surgeon</p>
+                        <div class="doctor-stats">
+                            <span><i class="fas fa-star"></i> 4.9</span>
+                            <span><i class="fas fa-user-md"></i> 20+ years</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-content">
+                <div class="features-text">
+                    <h2>Why Families Trust Sahayadri</h2>
+                    <p>We combine consultant-led treatment plans with streamlined digital workflows so your care remains fast, safe, and transparent.</p>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>Secure & Private</h4>
+                                <p>Your health data is encrypted and protected with industry-leading security.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-bolt"></i>
+                            <div>
+                                <h4>Instant Access</h4>
+                                <p>Get medical consultations within minutes, no waiting rooms.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-dollar-sign"></i>
+                            <div>
+                                <h4>Affordable Care</h4>
+                                <p>Transparent pricing and insurance support for all services.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="features-image">
+                    <div class="feature-showcase">
+                        <div class="showcase-item active">
+                            <i class="fas fa-mobile-alt"></i>
+                            <p>Mobile App Available</p>
+                        </div>
+                        <div class="showcase-item">
+                            <i class="fas fa-clock"></i>
+                            <p>24/7 Availability</p>
+                        </div>
+                        <div class="showcase-item">
+                            <i class="fas fa-globe"></i>
+                            <p>Global Network</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-image-panel">
+                    <img src="images/hero/hospital-campus.svg" alt="Sahayadri Hospital campus illustration">
+                </div>
+                <div class="about-content">
+                    <h2 class="section-title">A Real Hospital Experience, Not Just a Website</h2>
+                    <p class="about-lead">From emergency intake to discharge counseling, each step is coordinated through multidisciplinary teams and clinical checklists.</p>
+                    <div class="about-highlights">
+                        <div class="about-highlight">
+                            <i class="fas fa-user-nurse"></i>
+                            <div>
+                                <h4>Patient-Centric Care</h4>
+                                <p>Dedicated floor coordinators guide every patient and attendant through diagnostics, billing, and discharge.</p>
+                            </div>
+                        </div>
+                        <div class="about-highlight">
+                            <i class="fas fa-microscope"></i>
+                            <div>
+                                <h4>Integrated Diagnostics</h4>
+                                <p>In-house pathology and imaging teams support faster treatment decisions round the clock.</p>
+                            </div>
+                        </div>
+                        <div class="about-highlight">
+                            <i class="fas fa-shield-heart"></i>
+                            <div>
+                                <h4>Clinical Safety Standards</h4>
+                                <p>Medication reconciliation and ICU handoff protocols are monitored by senior clinical leadership.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Patient Voices</h2>
+                <p class="section-subtitle">Stories from families who trusted us during their most important moments.</p>
+            </div>
+            <div class="testimonials-grid">
+                <article class="testimonial-card">
+                    <p>"Emergency team responded within minutes and coordinated surgery the same night. The communication with our family was excellent."</p>
+                    <div class="testimonial-meta">
+                        <strong>Rohit Kulkarni</strong>
+                        <span>Trauma Care Attendant</span>
+                    </div>
+                </article>
+                <article class="testimonial-card">
+                    <p>"Our pediatric follow-ups are smooth and digital records make repeat visits very convenient. Doctors explain every step clearly."</p>
+                    <div class="testimonial-meta">
+                        <strong>Neha Bhosale</strong>
+                        <span>Mother of 2</span>
+                    </div>
+                </article>
+                <article class="testimonial-card">
+                    <p>"I booked online, completed tests quickly, and received specialist consultation the same day. Very organized OPD experience."</p>
+                    <div class="testimonial-meta">
+                        <strong>Vikrant Jagtap</strong>
+                        <span>Cardiology Patient</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section id="appointment" class="appointment">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Book an Appointment</h2>
+                <p class="section-subtitle">Choose your doctor and preferred slot. We will confirm your appointment instantly.</p>
+            </div>
+            <div class="appointment-wrapper">
+                <div class="appointment-form-card">
+                    <h3>Appointment Details</h3>
+                    <form id="appointmentForm">
+                        <div class="form-group">
+                            <input type="text" id="appointmentName" placeholder="Patient Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="appointmentPhone" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="appointmentDoctor" required>
+                                <option value="">Select Doctor</option>
+                                <option value="Dr. Rajesh Sharma">Dr. Rajesh Sharma - Cardiologist</option>
+                                <option value="Dr. Amit Patel">Dr. Amit Patel - Neurologist</option>
+                                <option value="Dr. Priya Nair">Dr. Priya Nair - Pediatrician</option>
+                                <option value="Dr. Vikram Singh">Dr. Vikram Singh - Orthopedic Surgeon</option>
+                            </select>
+                        </div>
+                        <div class="appointment-row">
+                            <div class="form-group">
+                                <input type="date" id="appointmentDate" required>
+                            </div>
+                            <div class="form-group">
+                                <select id="appointmentTime" required>
+                                    <option value="">Select Time</option>
+                                    <option value="09:00 AM">09:00 AM</option>
+                                    <option value="10:30 AM">10:30 AM</option>
+                                    <option value="12:00 PM">12:00 PM</option>
+                                    <option value="02:30 PM">02:30 PM</option>
+                                    <option value="04:00 PM">04:00 PM</option>
+                                    <option value="06:00 PM">06:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <select id="appointmentMode" required>
+                                <option value="">Consultation Mode</option>
+                                <option value="In-person Visit">In-person Visit</option>
+                                <option value="Video Consultation">Video Consultation</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="appointmentNotes" rows="3" placeholder="Reason for visit (optional)"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Confirm Appointment</button>
+                    </form>
+                    <div id="appointmentResult" class="appointment-result" aria-live="polite"></div>
+                </div>
+                <div class="appointment-info-card">
+                    <h3>Today's Quick Slots</h3>
+                    <div class="quick-slots">
+                        <div class="slot-item">
+                            <span class="slot-time">09:00 AM</span>
+                            <span class="slot-status available">Available</span>
+                        </div>
+                        <div class="slot-item">
+                            <span class="slot-time">10:30 AM</span>
+                            <span class="slot-status filling">Filling Fast</span>
+                        </div>
+                        <div class="slot-item">
+                            <span class="slot-time">12:00 PM</span>
+                            <span class="slot-status available">Available</span>
+                        </div>
+                        <div class="slot-item">
+                            <span class="slot-time">02:30 PM</span>
+                            <span class="slot-status filling">Filling Fast</span>
+                        </div>
+                        <div class="slot-item">
+                            <span class="slot-time">04:00 PM</span>
+                            <span class="slot-status available">Available</span>
+                        </div>
+                    </div>
+                    <p class="appointment-help-text">Need urgent help? Call <strong>+91 8767131112</strong> for priority assistance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">We're here to help with your healthcare needs</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+91 8767131112</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>bhairavrajput83@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Visit Us</h4>
+                            <p>Sahayadri Hospital, Pune, Maharashtra 411001</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Your Phone">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>Sahayadri Hospital Pune</span>
+                    </div>
+                    <p>Your trusted partner in modern healthcare, delivering evidence-based treatment with compassionate patient support.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#doctors">Doctors</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Video Consultation</a></li>
+                        <li><a href="#">E-Prescription</a></li>
+                        <li><a href="#">Lab Tests</a></li>
+                        <li><a href="#">Emergency Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get health tips and updates</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sahayadri Hospital Pune. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Message Modal -->
+    <div id="messageModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Send Message to Sahayadri Hospital</h3>
+                <span class="close-modal" onclick="closeMessageModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="quickMessageForm">
+                    <div class="form-group">
+                        <input type="text" id="quickName" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="quickPhone" placeholder="Your Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="quickMessage" placeholder="Your Message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Send to 8767131112</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Login to Sahayadri Hospital</h3>
+                <span class="close-modal" onclick="closeLoginModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <input type="email" id="loginEmail" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="loginPassword" placeholder="Password" required>
+                    </div>
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="rememberMe">
+                            <span class="checkmark"></span>
+                            Remember me
+                        </label>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Login</button>
+                    <div class="login-footer">
+                        <p>Don't have an account? <a href="#" onclick="showSignupModal()">Sign Up</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Sign Up - Sahayadri Hospital</h3>
+                <span class="close-modal" onclick="closeSignupModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="signupForm">
+                    <div class="form-group">
+                        <input type="text" id="signupName" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="signupEmail" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="signupPhone" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="signupPassword" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                    </div>
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="agreeTerms" required>
+                            <span class="checkmark"></span>
+                            I agree to the <a href="#">Terms & Conditions</a>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Sign Up</button>
+                    <div class="login-footer">
+                        <p>Already have an account? <a href="#" onclick="showLoginModal()">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "sahayadri-enhanced",
+  "version": "1.0.0",
+  "description": "Enhanced Sahayadri hospital website with modern design",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "echo 'Build complete'",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "healthcare",
+    "prescription",
+    "medical"
+  ],
+  "author": "Bhairavsingrajput",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "mongodb": "^6.17.0"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^11.0.1"
+  }
+}
