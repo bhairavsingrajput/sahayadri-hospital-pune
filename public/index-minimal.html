@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahayadri Hospital Pune</title>
+    <link rel="stylesheet" href="styles-minimal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>Sahayadri Hospital Pune</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#doctors" class="nav-link">Doctors</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn btn-outline">Login</button>
+                <button class="btn btn-primary">Book Appointment</button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Quality Healthcare
+                </h1>
+                <p class="hero-subtitle">
+                    Expert medical care with experienced doctors and modern facilities at Sahayadri Hospital Pune.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-large">
+                        Consult Doctor
+                    </button>
+                    <button class="btn btn-secondary btn-large">
+                        Book Appointment
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>10K+</h3>
+                        <p>Patients</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>500+</h3>
+                        <p>Doctors</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>24/7</h3>
+                        <p>Support</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-card">
+                    <div class="card-header">
+                        <div class="doctor-avatar">
+                            <img src="https://picsum.photos/seed/indian-doctor-male/100/100.jpg" alt="Doctor">
+                        </div>
+                        <div class="doctor-info">
+                            <h4>Dr. Rajesh Sharma</h4>
+                            <p>Cardiologist</p>
+                        </div>
+                        <div class="status-indicator online"></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="consultation-type">
+                            <i class="fas fa-video"></i>
+                            <span>Video Consultation</span>
+                        </div>
+                        <div class="consultation-time">
+                            <i class="fas fa-clock"></i>
+                            <span>Available in 5 mins</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Services</h2>
+                <p class="section-subtitle">Comprehensive medical services for your health needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Consultation</h3>
+                    <p>Connect with doctors remotely for medical advice and prescriptions.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h3>E-Prescription</h3>
+                    <p>Digital prescriptions delivered instantly after consultation.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Lab Tests</h3>
+                    <p>Comprehensive diagnostic services with accurate results.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="doctors">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Doctors</h2>
+                <p class="section-subtitle">Experienced medical professionals</p>
+            </div>
+            <div class="doctors-grid">
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="https://picsum.photos/seed/indian-neurologist/300/300.jpg" alt="Dr. Amit Patel">
+                        <div class="doctor-overlay">
+                            <button class="btn btn-small">View Profile</button>
+                        </div>
+                    </div>
+                    <div class="doctor-details">
+                        <h3>Dr. Amit Patel</h3>
+                        <p class="specialty">Neurologist</p>
+                        <div class="doctor-stats">
+                            <span><i class="fas fa-star"></i> 4.9</span>
+                            <span><i class="fas fa-user-md"></i> 15+ years</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="https://picsum.photos/seed/indian-female-doctor/300/300.jpg" alt="Dr. Priya Nair">
+                        <div class="doctor-overlay">
+                            <button class="btn btn-small">View Profile</button>
+                        </div>
+                    </div>
+                    <div class="doctor-details">
+                        <h3>Dr. Priya Nair</h3>
+                        <p class="specialty">Pediatrician</p>
+                        <div class="doctor-stats">
+                            <span><i class="fas fa-star"></i> 4.8</span>
+                            <span><i class="fas fa-user-md"></i> 12+ years</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="https://picsum.photos/seed/indian-orthopedic-surgeon/300/300.jpg" alt="Dr. Vikram Singh">
+                        <div class="doctor-overlay">
+                            <button class="btn btn-small">View Profile</button>
+                        </div>
+                    </div>
+                    <div class="doctor-details">
+                        <h3>Dr. Vikram Singh</h3>
+                        <p class="specialty">Orthopedic Surgeon</p>
+                        <div class="doctor-stats">
+                            <span><i class="fas fa-star"></i> 4.9</span>
+                            <span><i class="fas fa-user-md"></i> 20+ years</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-content">
+                <div class="features-text">
+                    <h2>Why Choose Us</h2>
+                    <p>Quality healthcare with experienced professionals and modern facilities.</p>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>Secure & Private</h4>
+                                <p>Your medical information is protected with advanced security measures.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-bolt"></i>
+                            <div>
+                                <h4>Quick Access</h4>
+                                <p>Get medical consultations without long waiting times.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-dollar-sign"></i>
+                            <div>
+                                <h4>Affordable Care</h4>
+                                <p>Transparent pricing and insurance support available.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="features-image">
+                    <div class="feature-showcase">
+                        <div class="showcase-item active">
+                            <i class="fas fa-mobile-alt"></i>
+                            <p>Mobile App</p>
+                        </div>
+                        <div class="showcase-item">
+                            <i class="fas fa-clock"></i>
+                            <p>24/7 Service</p>
+                        </div>
+                        <div class="showcase-item">
+                            <i class="fas fa-globe"></i>
+                            <p>Expert Network</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact</h2>
+                <p class="section-subtitle">Get in touch with us</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Call</h4>
+                            <p>+91 8767131112</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>bhairavrajput83@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Visit</h4>
+                            <p>Sahayadri Hospital, Pune, Maharashtra 411001</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>Sahayadri Hospital Pune</span>
+                    </div>
+                    <p>Quality healthcare services with experienced medical professionals.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#doctors">Doctors</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Video Consultation</a></li>
+                        <li><a href="#">E-Prescription</a></li>
+                        <li><a href="#">Lab Tests</a></li>
+                        <li><a href="#">Emergency Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for health updates</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sahayadri Hospital Pune. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script-minimal.js"></script>
+</body>
+</html>

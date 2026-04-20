@@ -13,7 +13,7 @@ const API_PREFIX = process.env.VERCEL ? '' : '/api';
 
 app.use(express.json({ limit: '1mb' }));
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, 'public')));
 
 let cachedDb = null;
 let cachedClient = null;
@@ -245,7 +245,7 @@ app.post(`${API_PREFIX}/auth/login`, async (req, res) => {
 });
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // For Vercel serverless deployment
