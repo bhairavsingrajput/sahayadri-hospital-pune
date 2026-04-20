@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 const PORT = Number(process.env.PORT || 3000);
 const DB_NAME = process.env.MONGODB_DB || 'hospital_portal';
-const API_PREFIX = '/api';
+const API_PREFIXES = ['', '/api'];
 
 app.use(express.json({ limit: '1mb' }));
 app.use(express.urlencoded({ extended: false }));
@@ -56,6 +56,12 @@ async function getDb() {
     throw new Error(`Unable to connect to MongoDB. Last error: ${lastError ? lastError.message : 'Unknown error'}`);
 }
 
+function registerRoute(method, path, handler) {
+    for (const prefix of API_PREFIXES) {
+        app[method](`${prefix}${path}`, handler);
+    }
+}
+
 function requireFields(payload, fields) {
     for (const field of fields) {
         if (!payload[field] || String(payload[field]).trim() === '') {
@@ -69,7 +75,7 @@ function safeText(value) {
     return String(value || '').trim();
 }
 
-app.get(`${API_PREFIX}/health`, async (req, res) => {
+registerRoute('get', '/health', async (req, res) => {
     try {
         const db = await getDb();
         await db.command({ ping: 1 });
@@ -79,7 +85,7 @@ app.get(`${API_PREFIX}/health`, async (req, res) => {
     }
 });
 
-app.post(`${API_PREFIX}/contact`, async (req, res) => {
+registerRoute('post', '/contact', async (req, res) => {
     try {
         const missing = requireFields(req.body, ['name', 'email', 'message']);
         if (missing) {
@@ -102,7 +108,7 @@ app.post(`${API_PREFIX}/contact`, async (req, res) => {
     }
 });
 
-app.post(`${API_PREFIX}/newsletter`, async (req, res) => {
+registerRoute('post', '/newsletter', async (req, res) => {
     try {
         const missing = requireFields(req.body, ['email']);
         if (missing) {
@@ -128,7 +134,7 @@ app.post(`${API_PREFIX}/newsletter`, async (req, res) => {
     }
 });
 
-app.post(`${API_PREFIX}/messages`, async (req, res) => {
+registerRoute('post', '/messages', async (req, res) => {
     try {
         const missing = requireFields(req.body, ['name', 'phone', 'message']);
         if (missing) {
@@ -151,7 +157,7 @@ app.post(`${API_PREFIX}/messages`, async (req, res) => {
     }
 });
 
-app.post(`${API_PREFIX}/appointments`, async (req, res) => {
+registerRoute('post', '/appointments', async (req, res) => {
     try {
         const missing = requireFields(req.body, ['name', 'phone', 'doctor', 'date', 'time', 'mode']);
         if (missing) {
@@ -181,7 +187,7 @@ app.post(`${API_PREFIX}/appointments`, async (req, res) => {
     }
 });
 
-app.post(`${API_PREFIX}/auth/signup`, async (req, res) => {
+registerRoute('post', '/auth/signup', async (req, res) => {
     try {
         const missing = requireFields(req.body, ['name', 'email', 'phone', 'password']);
         if (missing) {
@@ -212,7 +218,7 @@ app.post(`${API_PREFIX}/auth/signup`, async (req, res) => {
     }
 });
 
-app.post(`${API_PREFIX}/auth/login`, async (req, res) => {
+registerRoute('post', '/auth/login', async (req, res) => {
     try {
         const missing = requireFields(req.body, ['email', 'password']);
         if (missing) {
